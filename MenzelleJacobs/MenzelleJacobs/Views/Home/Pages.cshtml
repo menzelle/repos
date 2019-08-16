@@ -1,0 +1,19 @@
+﻿@model MenzelleJacobs.Models.PageModels
+@{
+    ViewData["Title"] = "Pages";
+}
+
+<div id="contact" style="visibility: hidden">Contact page goes here</div>
+<div id="experience" style="visibility: hidden">My experience page goes here</div>
+<div id="my-projects" style="visibility:hidden">My projects go here</div>
+
+
+
+<script>
+    $('.web-page').click(function () {
+        var id = this.id;
+        console.log(id)
+        document.getElementById('div.' + id).style.visibility = 'visible';
+    }); 
+
+</script>

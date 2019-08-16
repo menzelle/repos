@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<a onclick="ReturningSomething()">
+Return Json
+</a>
+
+<script>
+    function ReturningSomething() {
+
+$.get("/Home/ReturnJson", {_response:'Deepak'}, function (data) {  
+         alert(data);  
+     })
+    };
+
+  
+</script>

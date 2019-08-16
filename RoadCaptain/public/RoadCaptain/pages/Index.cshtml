@@ -1,0 +1,730 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<!DOCTYPE html>
+<html >
+<head>
+
+    @section Scripts {
+        <!-- link to the SqPaymentForm library -->
+        <script type="text/javascript" src="https://js.squareup.com/v2/paymentform"></script>
+        <script type="text/javascript">
+        window.applicationId = "@Model.ApplicationId";
+        window.locationId = "@Model.LocationId";
+        </script>
+        <!-- link to the local SqPaymentForm initialization -->
+        <script type="text/javascript" src="~/js/sq-payment-form.js"></script>
+    }
+    @section Styles {
+        <!-- link to the local SqPaymentForm style customization -->
+        <link rel="stylesheet" href="~/css/sq-payment-form.css" />
+    }
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <img src="~/images/RoadCaptainLogo.png" alt="Homepage">
+            </a>
+        </div> <!-- end header-logo -->
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <div class="header-nav__content">
+                <h3>Road Captain</h3>
+                <!-- Hidden Side Menu -->
+                <ul class="header-nav__list">
+                    <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
+                    <li><a class="smoothscroll" href="#about" title="about">About</a></li>
+                    <li><a class="smoothscroll" href="#services" title="services">Services</a></li>
+                    <li><a class="smoothscroll" href="#works" title="works">Works</a></li>
+                    <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
+                </ul>
+
+                <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>volunteer</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
+
+                <ul class="header-nav__social">
+                    <li>
+                        <a href="#0"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-instagram"></i></a>
+                    </li>
+
+                </ul>
+
+            </div> <!-- end header-nav__content -->
+
+        </nav> <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/main-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=top>
+
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+                <h1>
+                    Preparing youth, <br>
+                    For real life.
+                </h1>
+
+                <p>
+                    By instilling in them life's values, <br>
+                    ethics, morals & character.
+                </p>
+            </div> <!-- end home-content__main -->
+
+        </div> <!-- end home-content -->
+
+        <ul class="home-sidelinks">
+            <li><a class="smoothscroll" href="#about">About<span>who we are</span></a></li>
+            <li><a class="smoothscroll" href="#RC-Oath">RC Oath<span>guiding youth</span></a></li>
+            <li><a class="smoothscroll" href="#Rider-Oath">Rider Oath<span>guided youth</span></a></li>
+            <li><a class="smoothscroll" href="#services">Services<span>what we do</span></a></li>
+            <li><a class="smoothscroll" href="#contact">Contact<span>get in touch</span></a></li>
+        </ul> <!-- end home-sidelinks -->
+
+        <ul class="home-social">
+            <li class="home-social-title">Follow Us</li>
+            <li>
+                <a href="#0">
+                    <i class="fab fa-facebook"></i>
+                    <span class="home-social-text">Facebook</span>
+                </a>
+            </li>
+            <li>
+                <a href="#0">
+                    <i class="fab fa-twitter"></i>
+                    <span class="home-social-text">Twitter</span>
+                </a>
+            </li>
+            <li>
+                <a href="#0">
+                    <i class="fab fa-linkedin"></i>
+                    <span class="home-social-text">LinkedIn</span>
+                </a>
+            </li>
+        </ul> <!-- end home-social -->
+
+        <a href="#about" class="home-scroll smoothscroll">
+            <span class="home-scroll__text">Scroll Down</span>
+            <span class="home-scroll__icon"></span>
+        </a> <!-- end home-scroll -->
+
+    </section> <!-- end s-home -->
+    <!-- about
+    ================================================== -->
+    <section id='about' class="s-about">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Who We Are</h3>
+                <h1 class="display-1">We are a group of individuals advancing the heart of one man.</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row" data-aos="fade-up">
+            <div class="col-full">
+                <p class="lead">
+                    We are a group of individuals carrying on the heart of one man who understood the importance of loving and leading our youth.
+
+                </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row">
+
+            <div class="about-process process block-1-2 block-tab-full">
+
+                <div class="process__vline-left"></div>
+                <div class="process__vline-right"></div>
+
+                <div class="col-block process__col" data-item="1" data-aos="fade-up">
+                    <div class="process__text">
+                        <h4>President</h4>
+
+                        <p>
+                            "Momma D"
+                        </p>
+                    </div>
+                </div>
+                <div class="col-block process__col" data-item="2" data-aos="fade-up">
+                    <div class="process__text">
+                        <h4>Vice President</h4>
+
+                        <p>
+                            "Sunny D"
+                        </p>
+                    </div>
+                </div>
+                <div class="col-block process__col" data-item="3" data-aos="fade-up">
+                    <div class="process__text">
+                        <h4>Secretary</h4>
+
+                        <p>
+                            "Dollar"
+                        </p>
+                    </div>
+                </div>
+                <div class="col-block process__col" data-item="4" data-aos="fade-up">
+                    <div class="process__text">
+                        <h4>Treasurer</h4>
+
+                        <p>
+                            "Sharp"
+                        </p>
+                        <img class="staff-pics" src="~/images/staff/sharp.png" />
+                    </div>
+                </div>
+
+            </div> <!-- end process -->
+
+        </div> <!-- end about-stats -->
+
+    </section> <!-- end s-about -->
+
+    <section id='RC-Oath' class="s-rc-oath">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Road Captain Oath</h3>
+                <h1 class="display-1 oath-header">We lead by a code.</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row" data-aos="fade-up">
+            <div class="col-full">
+                <p class="lead">
+                    I will make it my ambition to lead my community and the youth right. I will protect, provide, and serve them doing my best to be a light.
+
+                    I will model loyalty, honor, and respect. I will show them how to be a man of character both on and off the set. I will be a pillar to my brothers so that we all can stand tall. And I will be there to catch my brothers should any of them fall.
+                    <br />
+                    <br />
+                    I am a Road Captain!
+
+                </p>
+            </div>
+        </div> <!-- end about-desc -->
+        <!-- end s-RC-Oath -->
+
+    </section>
+    <!--Rider Oath-->
+
+
+    <section id='Rider-Oath' class="s-rider-oath">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Rider Oath</h3>
+                <h1 class="display-1 oath-header">We live by a code.</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row" data-aos="fade-up">
+            <div class="col-full">
+                <p class="lead">
+                    I will honor myself and others. I will honor my brothers. I will not leave him behind. Lest I lose my colors. When jealousy strikes. I will strengthen my mind.
+                    For I am he and he is I. I will uplift, encourage and lead an honest life. And if that day comes I will be faithful to my wife.
+                    My character is strong. For my roots are deep. In this world I belong. A branch from a tree.
+
+                </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+
+
+    </section> <!-- end s-rider-oath -->
+    <!-- services
+    ================================================== -->
+    <section id='services' class="s-services light-gray">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">What We Do</h3>
+                <h1 class="display-1">Give our youth hope and a blueprint.</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row" data-aos="fade-up">
+            <div class="col-full">
+                <p class="lead">
+                    We aspire to build successful and well grounded young men. Young men that live by a code, help their community,
+                    communicate with honesty, relate with loyalty and love whole heartedly.
+                    We work to instill morals and ethics into children through leading by example, navigating them through terrain that
+                    we have experienced ourselves and surrounding them with a like-minded and lifetime community.
+                </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row services-list block-1-3 block-m-1-2 block-tab-full">
+
+            <div class="col-block service-item " data-aos="fade-up">
+                <div class="service-icon service-icon--brand-identity">
+                    <i class="icon-tv"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h4">Brand Identity</h3>
+                    <p>
+                        Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon  service-icon--illustration">
+                    <i class="icon-group"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h4">Illustration</h3>
+                    <p>
+                        Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon  service-icon--web-design">
+                    <i class="icon-earth"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h4">Web Design</h3>
+                    <p>
+                        Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon service-icon--product-strategy">
+                    <i class="icon-cube"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h4">Product Strategy</h3>
+                    <p>
+                        Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon  service-icon--ui-design">
+                    <i class="icon-window"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h4">UI/UX Design</h3>
+                    <p>
+                        Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon service-icon--mobile-dev">
+                    <i class="icon-lego-block"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h4">Mobile Development</h3>
+                    <p>
+                        Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+        </div> <!-- end services-list -->
+
+    </section> <!-- end s-services -->
+    <!-- works
+    ================================================== -->
+    <section id='works' class="s-works">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Featured Works</h3>
+                <h1 class="display-1">These are some of our recent works and we are excited to show them to you.</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row masonry-wrap">
+            <div class="masonry">
+
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-lamp.jpg" class="thumb-link" title="Lamp" data-size="1050x700">
+                                <img src="images/portfolio/lamp.jpg"
+                                     srcset="images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Lamp
+                            </h3>
+                            <p class="item-folio__cat">
+                                Web Design
+                            </p>
+                        </div>
+
+                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                            Project Link
+                        </a>
+
+                        <div class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-salad.jpg" class="thumb-link" title="Salad" data-size="1050x700">
+                                <img src="images/portfolio/salad.jpg"
+                                     srcset="images/portfolio/salad.jpg 1x, images/portfolio/salad@2x.jpg 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Salad
+                            </h3>
+                            <p class="item-folio__cat">
+                                Branding
+                            </p>
+                        </div>
+
+                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                            Project Link
+                        </a>
+
+                        <span class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-woodcraft.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
+                                <img src="images/portfolio/woodcraft.jpg"
+                                     srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Woodcraft
+                            </h3>
+                            <p class="item-folio__cat">
+                                Branding
+                            </p>
+                        </div>
+
+                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                            Project Link
+                        </a>
+
+                        <span class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+ 
+            </div> <!-- end masonry -->
+        </div> <!-- end masonry-wrap -->
+        @*<div class="testimonials-wrap" data-aos="fade-up">
+
+                <div class="row">
+                    <div class="col-full testimonials-header">
+                        <h2 class="h1">What Clients Are Saying.</h2>
+                    </div>
+                </div>
+
+                <div class="row testimonials">
+
+                    <div class="col-full testimonials__slider">
+
+                        <div class="testimonials__slide">
+                            <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
+                            <p>
+                                Qui ipsam temporibus quisquam velMaiores eos cumque distinctio nam accusantium ipsum.
+                                Laudantium quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium quos qui praesentium corpori.
+                            </p>
+                            <div class="testimonials__author">
+                                Tim Cook
+                                <span>CEO, Apple</span>
+                            </div>
+                        </div> <!-- end testimonials__slide -->
+
+                        <div class="testimonials__slide">
+                            <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonials__avatar">
+                            <p>
+                                Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
+                                Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam temporibus quisquam vel.
+                            </p>
+                            <div class="testimonials__author">
+                                Sundar Pichai
+                                <span>CEO, Google</span>
+                            </div>
+                        </div> <!-- end testimonials__slide -->
+
+                        <div class="testimonials__slide">
+                            <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
+                            <p>
+                                Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.
+                                Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
+                            </p>
+                            <div class="testimonials__author">
+                                Satya Nadella
+                                <span>CEO, Microsoft</span>
+                            </div>
+                        </div> <!-- end testimonials__slide -->
+
+                    </div> <!-- end testimonials__slider -->
+
+                </div> <!-- end testimonials -->
+
+            </div> <!-- end testimonials-wrap -->*@
+
+    </section> <!-- end s-works -->
+    <!-- stats
+    ================================================== -->
+    @*<section id="stats" class="s-stats">
+
+            <div class="row stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+
+                <div class="col-block stats__col ">
+                    <div class="stats__count">129</div>
+                    <h5>Awards Received</h5>
+                </div>
+                <div class="col-block stats__col">
+                    <div class="stats__count">1507</div>
+                    <h5>Cups of Coffee</h5>
+                </div>
+                <div class="col-block stats__col">
+                    <div class="stats__count">108</div>
+                    <h5>Projects Completed</h5>
+                </div>
+                <div class="col-block stats__col">
+                    <div class="stats__count">103</div>
+                    <h5>Happy Clients</h5>
+                </div>
+
+            </div> <!-- end stats -->
+
+        </section> <!-- end s-stats -->*@
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead subhead--light">Contact Us</h3>
+                <h1 class="display-1 display-1--light">Let's do something great.</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row">
+
+            <div class="col-full contact-main" data-aos="fade-up">
+                <p>
+                    <a href="mailto:contact@roadcaptain.org" class="contact-email">contact@roadcaptain.org</a>
+                    <span class="contact-number">(562) 270-5222  </span>
+                </p>
+            </div> <!-- end contact-main -->
+
+        </div> <!-- end row -->
+
+        <div class="row">
+
+            <div class="col-five tab-full contact-secondary" data-aos="fade-up">
+
+            </div> <!-- end contact-secondary -->
+
+            <div class="col-five tab-full contact-secondary" data-aos="fade-up">
+                <h3 class="subhead subhead--light">Follow Us</h3>
+
+                <ul class="contact-social">
+                    <li>
+                        <a href="#0"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-instagram"></i></a>
+                    </li>
+
+                </ul> <!-- end contact-social -->
+
+                <div class="contact-subscribe">
+                    <form id="mc-form" class="group mc-form" novalidate="true">
+                        <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
+                        <input type="submit" name="subscribe" value="Subscribe">
+                        <label for="mc-email" class="subscribe-message"></label>
+                    </form>
+                </div> <!-- end contact-subscribe -->
+            </div> <!-- end contact-secondary -->
+
+        </div> <!-- end row -->
+
+
+        <div class="cl-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+        </div>
+
+    </section> <!-- end s-contact -->
+    <!-- donate
+    ================================================== -->
+    <section id="donationForm" class="s-donation">
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead subhead--light">Give</h3>
+                <h1 class="display-1 ">And watch it grow.</h1>
+            </div>
+        </div> <!-- end section-header -->
+        <!-- Begin Payment Form -->
+        <div class="sq-payment-form">
+
+            <div id="sq-ccbox">
+                <!--
+              You should replace the action attribute of the form with the path of
+              the URL you want to POST the nonce to (for example, "/process-card").
+
+              You need to then make a "Charge" request to Square's transaction API with
+              this nonce to securely charge the customer.
+
+              Learn more about how to setup the server component of the payment form here:
+              https://docs.connect.squareup.com/payments/transactions/processing-payment-rest
+            -->
+                <form id="nonce-form" novalidate action="ProcessPayment" method="post" style="align-self:center">
+                    <div class="sq-field">
+                        <label class="sq-label">Card Number</label>
+                        <div id="sq-card-number"></div>
+                    </div>
+                    <div class="sq-field-wrapper">
+                        <div class="sq-field sq-field--in-wrapper">
+                            <label class="sq-label">CVV</label>
+                            <div id="sq-cvv"></div>
+                        </div>
+                        <div class="sq-field sq-field--in-wrapper">
+                            <label class="sq-label">Expiration</label>
+                            <div id="sq-expiration-date"></div>
+                        </div>
+                        <div class="sq-field sq-field--in-wrapper">
+                            <label class="sq-label">Postal</label>
+                            <div id="sq-postal-code"></div>
+                        </div>
+                    </div>
+                    <div class="sq-field">
+                        <button id="sq-creditcard" class="sq-button" onclick="onGetCardNonce(event)">
+                            Donate $1.00 Now
+                        </button>
+                    </div>
+                    <!--
+                  After a nonce is generated it will be assigned to this hidden input field.
+                -->
+                    <div id="error"></div>
+                    <input type="hidden" id="card-nonce" name="nonce">
+                </form>
+            </div>
+        </div>
+        <!-- End Payment Form -->
+
+    </section>
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+        </div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

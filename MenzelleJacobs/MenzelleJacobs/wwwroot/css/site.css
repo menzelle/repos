@@ -1,0 +1,79 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: darkgrey;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+ 
+#main_header {
+    text-align:center;
+    margin:10px, 100px, 10px, 100px;
+    padding:60px;
+    border: 12px solid #fee7f6;
+}
+#title {
+    font-family: 'Abril Fatface', cursive;
+    /*font-family: 'Lancelot', cursive;*/
+    font-size: 5em;
+    color: #fdc5e9;
+}
+#sub_title {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #7c0518;
+    font-size: 35px;
+    letter-spacing: 5px;
+}
+.navbar {
+    background-color: #fee7f6;
+    height: 10px;
+    border-color: #fff;
+}
+
+/*logo font color*/
+.navbar-inverse .navbar-brand {
+    color: #7c0518;
+}
+/* color of active menu item*/
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #fee7f6;
+}
+/*color of menu items*/
+.navbar-inverse .navbar-nav > li > a {
+    color: #7c0518;
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: #fdc5e9;
+ 
+}
+

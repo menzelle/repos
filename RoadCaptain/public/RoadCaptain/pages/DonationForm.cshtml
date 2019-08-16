@@ -1,0 +1,68 @@
+﻿@page
+@model RoadCaptain.Pages.DonationFormModel
+@{
+    ViewData["Title"] = "Donation Form";
+}
+
+@section Scripts {
+    <!-- link to the SqPaymentForm library -->
+    <script type="text/javascript" src="https://js.squareup.com/v2/paymentform"></script>
+    <script type="text/javascript">
+        window.applicationId = "@Model.ApplicationId";
+        window.locationId = "@Model.LocationId";
+    </script>
+    <!-- link to the local SqPaymentForm initialization -->
+    <script type="text/javascript" src="~/js/sq-payment-form.js"></script>
+}
+@section Styles {
+    <!-- link to the local SqPaymentForm style customization -->
+    <link rel="stylesheet" href="~/css/sq-payment-form.css" />
+}
+
+<!-- Begin Payment Form -->
+<div class="sq-payment-form">
+
+    <div id="sq-ccbox">
+        <!--
+          You should replace the action attribute of the form with the path of
+          the URL you want to POST the nonce to (for example, "/process-card").
+
+          You need to then make a "Charge" request to Square's transaction API with
+          this nonce to securely charge the customer.
+
+          Learn more about how to setup the server component of the payment form here:
+          https://docs.connect.squareup.com/payments/transactions/processing-payment-rest
+        -->
+        <form id="nonce-form" novalidate action="ProcessPayment" method="post">
+            <div class="sq-field">
+                <label class="sq-label">Card Number</label>
+                <div id="sq-card-number"></div>
+            </div>
+            <div class="sq-field-wrapper">
+                <div class="sq-field sq-field--in-wrapper">
+                    <label class="sq-label">CVV</label>
+                    <div id="sq-cvv"></div>
+                </div>
+                <div class="sq-field sq-field--in-wrapper">
+                    <label class="sq-label">Expiration</label>
+                    <div id="sq-expiration-date"></div>
+                </div>
+                <div class="sq-field sq-field--in-wrapper">
+                    <label class="sq-label">Postal</label>
+                    <div id="sq-postal-code"></div>
+                </div>
+            </div>
+            <div class="sq-field">
+                <button id="sq-creditcard" class="sq-button" onclick="onGetCardNonce(event)">
+                    Pay $1.00 Now
+                </button>
+            </div>
+            <!--
+              After a nonce is generated it will be assigned to this hidden input field.
+            -->
+            <div id="error"></div>
+            <input type="hidden" id="card-nonce" name="nonce">
+        </form>
+    </div>
+</div>
+<!-- End Payment Form -->

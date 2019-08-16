@@ -1,0 +1,14 @@
+﻿@model GetSnapMeImages.Models.ShowImageViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form method="post" asp-action="showImage">
+    <label>Enter Image Name Here</label>
+    <input type="text" asp-for="ImageSource" />
+    <button type="submit" >Get Image</button>
+</form>
+
+
+
