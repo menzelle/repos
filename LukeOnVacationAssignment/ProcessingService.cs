@@ -10,10 +10,12 @@ namespace LukeOnVacationAssignment
 
     class ProcessingService
     {
-        public static string RandomNum()
+        public static int RandomNum()
         {
             Random randomNum = new Random();
-            return randomNum.ToString();
+            return randomNum.Next();
+
+            //return randomNum.ToString();
         }
 
         public static string AllCities(string city)
@@ -30,10 +32,17 @@ namespace LukeOnVacationAssignment
                 }
 
             Console.WriteLine("Writing to file...");
-            System.IO.File.WriteAllText(filepath + filename, RandomNum());
-            Console.WriteLine(filename + " file has been created.");
-            Console.ReadLine();
-            return filename;
+            System.IO.File.AppendAllText(filepath + filename, RandomNum().ToString() + Environment.NewLine);
+            if (_city.ToUpper()=="PASCO")
+            {
+                return filename;
+            }
+            else
+            {
+                Console.WriteLine(filename + " file has been created.");
+                return filename;
+
+            }
         }
 
         public static string Pasco(string city)
@@ -41,9 +50,10 @@ namespace LukeOnVacationAssignment
             
             string filepath = @"C:\Temp\";
             var filename = AllCities(city);
-            Console.WriteLine("Writing to file...");
-            System.IO.File.AppendAllText(filepath + filename, RandomNum()+" Pasco");
-            Console.WriteLine(filename + " file has been created.");
+            string content = RandomNum().ToString() + "Pasco";
+            Console.WriteLine("Reopening file.");
+            System.IO.File.AppendAllText(filepath + filename, content);
+            Console.WriteLine(filename + " file has been updated.");
             return filename;
         }
 
@@ -59,7 +69,7 @@ namespace LukeOnVacationAssignment
                 Directory.CreateDirectory(filepath);
             }
 
-            System.IO.File.AppendAllText(filepath + filename, RandomNum());
+            System.IO.File.AppendAllText(filepath + filename, RandomNum().ToString());
 
             return filename;
         }

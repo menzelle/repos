@@ -29,8 +29,8 @@ namespace LukeOnVacationAssignment
                          .GetMethod(userCity);
                       method.Invoke(null, new object[] {userCity});
 
-                cityService _cityService = new cityService(method);
-                Console.WriteLine(_cityService + "has been updated.");
+                //cityService _cityService = new cityService(method);
+                //Console.WriteLine(method.filename + "has been updated.");
             }
             catch (Exception ex)
             {
