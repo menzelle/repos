@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewData["Title"] = "Projects";
+    Layout = "~/Views/Shared/BaseWhiteLayout.cshtml";
+}
+
+
+
+<table>
+    <tr>
+        <td>
+            <button id="project-title-buttons" type="button" onclick="getContent('snapmeinfo')" aria-label="Click For More Info About SnapMe" data-balloon-pos="right">SnapMe</button>
+            <p>
+                An internal 3 part solution which clocked employees in with a selfie and generated reports for management.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <button id="project-title-buttons" type="button" onclick="getContent('wpudainfo')" aria-label="Click For More Info About WPDUA" data-balloon-pos="right">WPUDA</button>
+            <p>
+                A mobile application which allows authenticated users to access member
+                directory.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <button id="project-title-buttons" type="button" onclick="getContent('hninfo')" aria-label="Click For More About This Project" data-balloon-pos="up">Housing Navigator Management System</button>
+            <p>
+                Introduced a SQL database to store landlord contact list, housing opportunities and manage relationships.     
+            </p>
+        </td>
+    </tr>
+</table>
+<p id="snapmeinfo" style="display:none" class="Snap Me">
+    As a junior developer I’ve worked mainly on an internal
+    project named Snap Me.
+
+    It was an application which allowed users to clock in
+    with a selfie on their phone. This image and other clock in data was collected and uploaded to a data store to
+    be used for reporting on a web application. Within the solution, I was assigned to the API and the web app.
+
+    I implemented OpenID Connect to restrict access to the application. Migrated data on premises and to the cloud with
+    the help of Azure services such as Data Factory, Data Warehouse and Functions. I created many of the repository methods
+    which ran CRUD operations against the database. I also fancied up the front end with the help of Bootstrap and DataTables.Net. 
+
+    Most recently, in cost reduction efforts, I created a scheduled
+    hosted service (background task) within the application which replaced Azure
+    Elastic Web Job service with a no cost alternative.
+</p>
+<p class="WPUDA" id="wpudainfo" style="display:none">
+    A Mobile Application that allows authenticated users to access
+    member directory. The application utilized a universal encrypted key to
+    authenticate and authorize. The directory was published to a C-Name and hidden
+    from search engines (Robots.txt).
+    Technologies Used:
+    Seattle Cloud platform (universal mobile application) 
+    JavaScript encryption
+    HTML5 / C#
+</p>
+<p class="Housing Navigator Managment System" id="hninfo" style="display:none">
+    In 2015 I was hired as a housing navigator (a liason
+    between landlords in the community and social workers with clients experiencing homelessness). The position was
+    new so there were no existing sytems or processes. In order to better manage my relationships with landlords and
+    the case workers seeking housing for their clients,
+    I developed a system to document the landlords that I interacted with. I created a SQL database
+    with 5 tables documenting contact information, property information,
+    information on available housing opportunities and an address book. I kept records of who I contacted
+    along with details around the communication such as date and follow up information.  From this database I ran weekly reports of available
+    housing opportunities which I would email to case workers. I also created an electronic referral form in Word which
+    autopopulated the case workers' information when they opened the document from their work laptop.
+</p>
+
+<script>
+    $('#menzellesModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var title = button.data('title') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text(title)
+}
+</script>

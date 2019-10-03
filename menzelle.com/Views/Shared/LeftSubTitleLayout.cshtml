@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - menzelle.com</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+    <style>
+        .openbtn{
+            background-color:gray;
+        }
+         .openbtn:hover {
+        background-color: lightgray;
+    }
+         p{
+             color:white;
+         }
+    </style>
+</head>
+<body>
+  
+    <partial name="_CookieConsentPartial" />
+    <button id="hamburger" class="openbtn" onclick="openNav()">&#9776;</button>
+            <partial name="SlideMenu" />
+
+    <div class="container">
+       <div class="row" style="width:100vw; position:relative;">
+           <div class="col-md-6" style="background-color:red; height:450px; margin:0; position:absolute; top:50%; transform: translate(0, 30%)">
+               <p >Here's my test and here are mt alsdkfadlskfj asdfjal dsfflksdjf
+               asdlfksdalfkjsdfsdjflkdsjfljadslfjdslkfjsdlfjsdlkfjsldfjaslfjalsdfjlksjfd
+               asdlfkjasdlfjdslfkjaldkfjsadkfjsadfkjaslfjsdf
+               sflasdkjfsdaklfjsdlafjdslfkjslkj</p>
+
+           </div>
+           <div class="col-md-6" style="height:450px; margin:0; position:absolute; top:50%; right:-10px; transform: translate(0, 30%)">
+               <div class="right-side-title-container">
+                   <div style=" height: 90%; display: flex; align-items: center; vertical-align: middle; overflow:hidden; position:fixed; right:0px;">
+                       <h1 id="side-title" style="height: 90%; display: flex; align-items: center; overflow:hidden; position:fixed; right:5px; margin:auto">@ViewBag.Title</h1>
+                       </div>
+                   </div>
+               </div>
+           </div>
+                @RenderBody()
+
+           
+        <div style="position:fixed; bottom:0px; width: 100vw; text-align:center">
+            <hr />
+            <footer>
+                <p>&copy; 2019 - menzelle.com</p>
+            </footer>
+        </div>
+
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+  
+</body>
+</html>

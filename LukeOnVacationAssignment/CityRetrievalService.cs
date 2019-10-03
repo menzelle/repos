@@ -21,5 +21,10 @@ namespace LukeOnVacationAssignment
             return city;
         }
 
+        public  string ProcessSpecialCases (string _city)
+        {
+            string userCity = (_city.ToUpper() == "RENTON") ? "AllCities" : (_city.ToUpper() == "SEATAC") ? "SeaTac" : _city;
+            return userCity;
+        }
     }
 }

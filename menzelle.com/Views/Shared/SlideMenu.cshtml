@@ -1,0 +1,83 @@
+﻿
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link active" href="/home">
+                Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" asp-action="aboutme">
+                About Me
+            </a>
+        </li>
+        
+        @*<li class="nav-item">
+            <a class="nav-link" asp-action="TechnicalSkills">
+                Technical Skills
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-action="projects">
+                Projects
+            </a>*@
+
+
+        @*SubMenu ------------------------------------------------------------------------------------->*@
+        @*
+                            <a href="#projectsSubmenu" class="nav-link" data-toggle="collapse" aria-expanded="false">Projects</a>
+
+        <ul class="collapse list-unstyled" id="projectsSubmenu">
+                            <li>
+                                <a href="#">SnapMe</a>
+                            </li>
+                            <li>
+                                <a href="#">WPUDA</a>
+                            </li>
+                            <li>
+                                <a href="#">Housing Navigator</a>
+                            </li>
+                        </ul>
+
+            -------------------------------------------------------------------------------->
+        *@
+
+
+
+        @*</li>
+
+        <li class="nav-item">
+            <a class="nav-link" asp-action="degreesandcerts">
+                Degrees + Certs
+            </a>
+        </li>*@
+
+        <li class="nav-item">
+            <a class="nav-link" asp-action="resume">
+                My Resume
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-action="contactme">
+                Contact Me
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<script>
+    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+
+    }
+
+</script>

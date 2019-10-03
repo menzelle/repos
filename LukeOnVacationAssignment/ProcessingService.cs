@@ -10,10 +10,10 @@ namespace LukeOnVacationAssignment
 
     class ProcessingService
     {
-        public static int RandomNum()
+        private static string RandomNum()
         {
             Random randomNum = new Random();
-            return randomNum.Next();
+            return randomNum.Next().ToString();
 
             //return randomNum.ToString();
         }
@@ -32,7 +32,7 @@ namespace LukeOnVacationAssignment
                 }
 
             Console.WriteLine("Writing to file...");
-            System.IO.File.AppendAllText(filepath + filename, RandomNum().ToString() + Environment.NewLine);
+            System.IO.File.AppendAllText(filepath + filename, RandomNum() + Environment.NewLine);
             if (_city.ToUpper()=="PASCO")
             {
                 return filename;
@@ -50,26 +50,26 @@ namespace LukeOnVacationAssignment
             
             string filepath = @"C:\Temp\";
             var filename = AllCities(city);
-            string content = RandomNum().ToString() + "Pasco";
+            string content = RandomNum() + "Pasco";
             Console.WriteLine("Reopening file.");
             System.IO.File.AppendAllText(filepath + filename, content);
             Console.WriteLine(filename + " file has been updated.");
             return filename;
         }
 
-        public static string Seatac(string city)
+        public static string SeaTac(string city)
         {
             string filepath = @"C:\Temp\";
             string filename = "Random.txt";
-
+            
 
             if (!Directory.Exists(filepath))
             {
                 Console.WriteLine("Creating Folder...");
                 Directory.CreateDirectory(filepath);
             }
-
-            System.IO.File.AppendAllText(filepath + filename, RandomNum().ToString());
+            Console.WriteLine("Opening Folder...");
+            System.IO.File.AppendAllText(filepath + filename, RandomNum());
 
             return filename;
         }

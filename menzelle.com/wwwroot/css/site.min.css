@@ -1,0 +1,230 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    min-height: 450px
+}
+
+body {
+    padding: 0;
+    min-height: 450px
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: lightgray;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)
+}
+
+    .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        color: gray;
+        display: block;
+        transition: 0.3s
+    }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+            background-color: gray
+        }
+
+    .sidebar.closebtn {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 36px
+    }
+
+.closebtn a:hover {
+    background-color: lightgray
+}
+
+.openbtn {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    border: none
+}
+
+    .openbtn:hover {
+        background-color: gray
+    }
+
+.container {
+    margin: 0;
+    padding: 0
+}
+
+.center {
+    padding: 70px 0;
+    text-align: center
+}
+
+#side-title {
+    font-size: 7.5vh;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase
+}
+
+#subject-title {
+    color: #DDAF8F;
+    text-transform: uppercase;
+    font-size: 1.5em
+}
+
+a:link, a:visited, a:hover {
+    text-decoration: none
+}
+
+.right-side-title-container {
+    background-color: gray;
+    height: 15vh;
+    width: 35vw;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    top: 40%;
+    vertical-align: middle;
+    text-align: center;
+    color: #DDAF8F
+}
+
+.left-side-title-container {
+    background-color: #DDAF8F;
+    height: 15vh;
+    width: 35vw;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 40%;
+    vertical-align: middle;
+    text-align: center;
+    color: gray
+}
+
+.sub-page-container {
+    height: 70vh;
+    width: 40vw;
+    padding: 0;
+    position: fixed;
+    left: 10%;
+    top: 20%;
+    bottom: 20%;
+    vertical-align: middle;
+    overflow: auto
+}
+
+.left-sub-page-container {
+    height: 60vh;
+    width: 40vw;
+    padding: 0;
+    position: fixed;
+    right: 10%;
+    top: 30%;
+    vertical-align: middle;
+    overflow: auto
+}
+
+p {
+    letter-spacing: 3px;
+    font-size: 1em
+}
+
+td {
+    padding: 15px
+}
+
+.aboutme-div {
+    background-color: #DDAF8F;
+    height: 100vh;
+    width: 35vw;
+    color: gray;
+    position: absolute;
+    right: 0;
+    top: 20%
+}
+
+.aboutme-container {
+    position: fixed;
+    right: 0;
+    overflow: auto;
+    top: 20%;
+    bottom: 10%;
+    width: 30vw
+}
+
+.aboutme-content {
+    padding-right: 10%;
+    text-align: right
+}
+
+.aboutme-images {
+    overflow: auto;
+    width: 50vw;
+    position: fixed;
+    left: 0;
+    top: 20%;
+    bottom: 10%
+}
+
+#image1 {
+    position: fixed;
+    left: 0;
+    top: 20%;
+    bottom: 10%;
+    max-width: 27vw;
+    z-index: -1;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)
+}
+
+#image2 {
+    float: left;
+    margin-left: 20vw;
+    margin-top: 10vh;
+    max-width: 25vw;
+    z-index: 9999;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)
+}
+
+#project-title-buttons {
+    color: #DDAF8F;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    box-shadow: none;
+    font-weight: 500;
+    padding: 0;
+    --balloon-color: lightgray
+}
+
+#main-logo {
+    background-color: gray;
+    height: 40vh;
+    width: 40vw;
+    max-width: 510px;
+    min-height: 165px;
+    padding: 0;
+    margin-left: 3%;
+    position: absolute
+}
